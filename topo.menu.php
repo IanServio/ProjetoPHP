@@ -36,20 +36,24 @@
           text-decoration: none;
           ">FALE CONOSCO</a>
 
-  <!--Barra de pesquisa-->
-  <h3>
-  <div style="margin-left: 5px;">
-    <input type="text" placeholder="Pesquisar" style="padding: 8px;
+  <!--Botão de Login - registrar-->
+  <a href="paginalogin.php" style="margin-right: 5px;
+     color: black;
+      font-family: Calibri;
+        padding: 5px;
          border: 1px solid black;
-          border-radius: 5px;">
+          background-color: #84fa84;
+           border-radius: 5px;
+           text-decoration: none;
+           ">Login</a>
 
-    <button style="color: black;
-         font-family: Calibri;
-           padding: 8px;
-            border: 1px solid black;
-             background-color: #84fa84;
-              border-radius: 5px;
-              ">Pesquisar</button>
-              </h3>
-  </div>
+           <a href="<!--Aqui-->" style="margin-right: 5px;
+     color: black;
+      font-family: Calibri;
+        padding: 5px;
+         border: 1px solid black;
+          background-color: #84fa84;
+           border-radius: 5px;
+           text-decoration: none;
+           ">Registrar</a>
 </div>
