@@ -4,8 +4,9 @@
  display: flex;
    align-items: center;">
 
-  <img width="350" src="./png/logo3.png" alt="calibre" style="margin-right: 10px;">
-
+  <a href="index.php">
+    <img width="350" src="./png/logo3.png" alt="calibre" style="margin-right: 10px;">
+  </a>
   <!--Menu de links-->
   <a href="index.php" style="margin-right: 5px;
      color: black;
@@ -17,16 +18,6 @@
            text-decoration: none;
            ">INICIO</a>
 
-  <a href="?pg=quemsomos" style="margin-right: 5px;
-     color: black;
-      font-family: Calibri;
-        padding: 5px;
-         border: px solid black;
-          background-color: #F0F8FF;
-           border-radius: 5px;
-           text-decoration: none;
-           ">QUEM SOMOS</a>
-
   <a href="?pg=faleconosco" style="color: black;
      font-family: Calibri;
        padding: 5px;
@@ -36,7 +27,16 @@
           text-decoration: none;
           ">FALE CONOSCO</a>
 
-  <!--Botão de Login - registrar-->
+          <a href="?pg=camisas" style="color: black;
+     font-family: Calibri;
+       padding: 5px;
+        border: 1px solid black;
+         background-color: #F0F8FF;
+          border-radius: 5px;
+          text-decoration: none;
+          ">CAMISAS</a>
+
+  <!--Botãos de Login - registrar-->
   <a href="paginalogin.php" style="margin-right: 5px;
      color: black;
       font-family: Calibri;
@@ -47,7 +47,7 @@
            text-decoration: none;
            ">Login</a>
 
-           <a href="<!--Aqui-->" style="margin-right: 5px;
+  <a href="<!--Aqui-->" style="margin-right: 5px;
      color: black;
       font-family: Calibri;
         padding: 5px;
