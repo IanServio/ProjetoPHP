@@ -4,7 +4,6 @@
         print "<script> location.href = 'index.php';</script>";
     }
 
-    include_once('config.php');
 ?>
 
 
@@ -29,12 +28,12 @@
     line-height: 15px;           Ajuste a altura da linha conforme necessário 
     vertical-align: text-top;    Ajuste a posição vertical -->
 
-<!--Menu de links-->
-<a href="index.php"><img width="75" src="./png/inicio-icone.png" style="margin-bottom: -10; margin-right: 15px;"></a>
+  <!--Menu de links-->
+  <a href="index.php"><img width="75" src="./png/inicio-icone.png" style="margin-bottom: -10; margin-right: 15px;"></a>
 
-<a href="?pg=faleconosco"><img width="75" src="./png/duvidas-icone.png" style="margin-bottom: -10; margin-right: 15px;"></a>
+  <a href="?pg=faleconosco"><img width="75" src="./png/duvidas-icone.png" style="margin-bottom: -10; margin-right: 15px;"></a>
 
-<a href="?pg=camisas"><img width="75" src="./png/camisas-icone.png" style="margin-bottom: -10; margin-right: 15px;"></a>
+  <a href="?pg=camisas"><img width="75" src="./png/camisas-icone.png" style="margin-bottom: -10; margin-right: 15px;"></a>
 
 
   <!--Botãos de Login - registrar-->
@@ -47,5 +46,5 @@
   <?php
       echo "Ola, ".$_SESSION['usuario'];
       echo "<a href ='logout.php' class='btn btn-danger'>Sair</a>";
-    ?>
+  ?>
 </div>
