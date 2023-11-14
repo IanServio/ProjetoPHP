@@ -9,3 +9,4 @@ if (empty($_SERVER["QUERY_STRING"])) {
     include_once("$pg.php");
 }
 include_once("rodape.php");
+?>

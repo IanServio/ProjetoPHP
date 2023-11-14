@@ -1,5 +1,6 @@
-<!--banner-->
-<img width="1294" src="./png/banner.png">
+<div style="display: flex; justify-content: center; margin-top: -5px;">
+  <img width="1294" src="./png/banner.png">
+</div>
 <h1>
         <center>
             <p style="color: #372162;font-family: Calibri;">Sobre a loja</p>
