@@ -43,8 +43,5 @@
  ">
   
   </a>
-  <?php
-      echo "Ola, ".$_SESSION['usuario'];
-      echo "<a href ='logout.php' class='btn btn-danger'>Sair</a>";
-  ?>
+ 
 </div>
