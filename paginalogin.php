@@ -41,7 +41,7 @@
                             <h3>Acesso Restrito</h3>
                         </div>
                         <div class="card-body">
-                            <form action="login.php" method="POST">
+                            <form action="verificalogin.php" method="POST">
                                 <div>
                                     <div class="mb-3">
                                         <label>Usuario</label>
