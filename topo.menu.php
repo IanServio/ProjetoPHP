@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(empty($_SESSION)){
+        print "<script> location.href = 'index.php';</script>";
+    }
+
+    include_once('config.php');
+?>
+
+
 <div style="background-color: #372162;
  padding: 10px;
  text-align: right;
@@ -34,4 +44,8 @@
  ">
   
   </a>
+  <?php
+      echo "Ola, ".$_SESSION['usuario'];
+      echo "<a href ='logout.php' class='btn btn-danger'>Sair</a>";
+    ?>
 </div>
