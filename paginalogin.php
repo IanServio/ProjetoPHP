@@ -38,7 +38,7 @@
                 <div class="col-log-4 offset-lg-4">
                     <div class="card">
                         <div class="card-body">
-                            <h3>Acesso Restrito</h3>
+                            <h3>Login Usuario</h3>
                         </div>
                         <div class="card-body">
                             <form action="login.php" method="POST">
