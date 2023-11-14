@@ -6,7 +6,7 @@
     }
 
 
-    include_once('config.php');
+    include_once('configBDadmin.php');
 
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
