@@ -49,6 +49,7 @@
             <div class="row">
                 <div class="col mt-5">
                     <?php
+                        include_once("../config.php");
                         switch($_REQUEST['page']){
                             case"novo":
                                 include("novousuario.php");
@@ -56,6 +57,9 @@
                             case "listar":
                                 include("listarusuario.php");
                             break;
+                            case "salvar":
+                                include("salvarusuario.php");
+                                break;
                             default:
                                 echo "<h1> Bem Vindo! </h1>";
                         }
@@ -63,5 +67,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>
