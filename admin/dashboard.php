@@ -14,10 +14,10 @@
         <title>Log-in</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="body-back">
         <nav class="navbar navbar-light bg-light">
             <div class="container.fluid">
-                <a class="navbar-brand">Sistema X </a>
+                <a class="navbar-brand">Sistema De Cadastro </a>
                 <?php
                     echo "Ola, ".$_SESSION['nome'];
                     echo "<a href ='logout.php' class='btn btn-danger'>Sair</a>";
@@ -69,6 +69,19 @@
         </div>
 
         <script src="js/bootstrap.bundle.min.js"></script>
-
+        <style>
+            .body-back{
+                background-color: #372162;
+            }
+            h1{
+                color: white;
+            }
+            .navbar{
+                display: flex;
+                justify-content: center;
+                margin-right: 
+            }
+            
+        </style>
     </body>
 </html>
