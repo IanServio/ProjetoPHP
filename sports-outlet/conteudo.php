@@ -1,5 +1,5 @@
 <div style="display: flex; justify-content: center; margin-top: -5px;">
-  <img width="1294" src="./png/banner.png">
+  <img width="1294" src="../png/banner.png">
 </div>
 <h1>
         <center>
