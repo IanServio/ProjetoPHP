@@ -1,13 +1,13 @@
 <?php
-include 'conexao.php';
+include ('conexao.php');
 
 // Adicionar Produto
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
     $titulo = $_POST['titulo'];
     $imagem = $_POST['imagem'];
-    $link_fonte = $_POST['link_fonte'];
+    $fonte = $_POST['fonte'];
 
-    $sql = "INSERT INTO produtos (titulo, imagem, link_fonte) VALUES ('$titulo', '$imagem', '$link_fonte')";
+    $sql = "INSERT INTO produtos (titulo, imagem, fonte) VALUES ('$titulo', '$imagem', '$fonte')";
     $conexao->query($sql);
 }
 
@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar'])) {
     $id = $_POST['id'];
     $titulo = $_POST['titulo'];
     $imagem = $_POST['imagem'];
-    $link_fonte = $_POST['link_fonte'];
+    $fonte = $_POST['fonte'];
 
-    $sql = "UPDATE produtos SET titulo='$titulo', imagem='$imagem', link_fonte='$link_fonte' WHERE id=$id";
+    $sql = "UPDATE produtos SET titulo='$titulo', imagem='$imagem', fonte='$fonte' WHERE id=$id";
     $conexao->query($sql);
 }
 
@@ -51,8 +51,8 @@ $resultado = $conexao->query($sql);
     <label for="imagem">Imagem URL:</label>
     <input type="text" name="imagem" required>
     
-    <label for="link_fonte">Link da Fonte:</label>
-    <input type="text" name="link_fonte" required>
+    <label for="fonte">Link da Fonte:</label>
+    <input type="text" name="fonte" required>
     
     <button type="submit" name="adicionar">Adicionar Produto</button>
 </form>
@@ -63,7 +63,7 @@ while ($row = $resultado->fetch_assoc()) {
     echo '<div style="border: 1px solid #ddd; padding: 10px; margin: 10px;">';
     echo '<h3>' . $row['titulo'] . '</h3>';
     echo '<img src="' . $row['imagem'] . '" alt="' . $row['titulo'] . '" style="max-width: 100%;">';
-    echo '<p>Fonte: <a href="' . $row['link_fonte'] . '" target="_blank">' . $row['link_fonte'] . '</a></p>';
+    echo '<p>Fonte: <a href="' . $row['fonte'] . '" target="_blank">' . $row['fonte'] . '</a></p>';
     echo '<form method="post" action="admin.php" style="display: inline-block;">';
     echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
     echo '<button type="submit" name="editar">Editar</button>';
