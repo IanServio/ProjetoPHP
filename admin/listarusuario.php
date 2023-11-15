@@ -12,6 +12,7 @@
             print "<th>ID</th>";
             print "<th>NOME</th>";
             print "<th>E-MAIL</th>";
+            print "<th>Acoes</th>";
             print "</tr>";
 
         while($row = $res->fetch_object()){
@@ -19,6 +20,10 @@
             print "<td>".$row->id. "</td>";
             print "<td>".$row->usuario. "</td>";
             print "<td>".$row->email. "</td>";
+            print "<td>
+                    <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'> Editar </button>
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'> Excluir </button>
+                   </td>";
             print "</tr>";
 
         }

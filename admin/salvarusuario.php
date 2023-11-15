@@ -26,10 +26,36 @@
             }
             break;
         case 'editar':
-            # code...
+            $usuario = $_POST["usuario"];
+            $email = $_POST["email"];
+            $senha = $_POST["senha"];
+
+            $sql = "UPDATE loginusuarios  SET usuario='{$usuario}',email='{$email}',senha='{$senha}' WHERE id=.$_REQUEST[id]";
+
+            $res = $conn->query($sql);
+
+            if($res==true){
+                echo "<script>alert ('Usuario Editado com sucesso'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+            }else{
+                echo "<script>alert ('Nao foi possivel Editar o Usuario'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+
+            }
             break;
-        case 'deletar':
-            # code...
+        case 'excluir':
+            $sql= "DELETE FROM loginusuarios  WHERE id=.$_REQUEST[id]"; 
+
+            $res = $conn->query($sql);
+
+            if($res==true){
+                echo "<script>alert ('Excluido com sucesso'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+            }else{
+                echo "<script>alert ('Nao foi possivel Excluir o Usuario'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+
+            }
             break;
         
      }

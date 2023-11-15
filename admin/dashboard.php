@@ -20,7 +20,7 @@
                 <a class="navbar-brand">Sistema De Cadastro </a>
                 <?php
                     echo "Ola, ".$_SESSION['nome'];
-                    echo "<a href ='logout.php' class='btn btn-danger'>Sair</a>";
+                    echo "<a href ='logout.php' class='btn btn-danger class-1'>Sair</a>";
                 ?>
             </div>
         </nav>
@@ -60,8 +60,12 @@
                             case "salvar":
                                 include("salvarusuario.php");
                                 break;
+                            case "editar":
+                                include("editarusuario.php");
+                                break;
                             default:
-                                echo "<h1> Bem Vindo! </h1>";
+                                echo "<h1> Bem Vindo! </h1>
+                                <p>Aqui voce poderar, adicionar, editar, excluir e listar todas as opcoes disponiveis </p>";
                         }
                     ?>
                 </div>
@@ -76,10 +80,21 @@
             h1{
                 color: white;
             }
+            p{
+                color: white;
+            }
             .navbar{
                 display: flex;
                 justify-content: center;
-                margin-right: 
+            }
+            .class-1{
+                position: relative;
+                left: 750px;
+                margin-top: 10px;
+            }
+            .navbar-brand{
+                border: 2px solid #333;
+                border-radius: 10px;
             }
             
         </style>
