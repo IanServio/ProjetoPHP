@@ -6,7 +6,7 @@
         <input type="text" name="usuario" class="form-control">
     </div>
     <div class="mb-3">
-        <label> senha </label>
+        <label> Senha </label>
         <input type="password" name="senha" class="form-control">
     </div>
     <div class="mb-3">

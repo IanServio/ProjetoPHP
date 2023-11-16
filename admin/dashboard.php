@@ -11,7 +11,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log-in</title>
+        <title>Page Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body class="body-back">
@@ -39,7 +39,13 @@
                     <a class="nav-link" href="?page=novo">Novo Usuario</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=listar">Listar Usuario</a>
+                    <a class="nav-link" href="?page=listar">Listar Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="?page=novop">Adicionar Produto</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="?page=listarp">Listar Produtos</a>
                     </li>
                 </ul>
                 </div>
@@ -62,6 +68,15 @@
                                 break;
                             case "editar":
                                 include("editarusuario.php");
+                                break;
+                            case "novop":
+                                include("novoproduto.php");
+                                break;
+                            case "salvarp":
+                                include("salvarproduto.php");
+                                break;
+                            case "listarp":
+                                include("listarproduto.php");
                                 break;
                             default:
                                 echo "<h1> Bem Vindo! </h1>
