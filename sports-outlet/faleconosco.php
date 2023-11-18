@@ -1,32 +1,81 @@
-<div
-    style="background-color: #372162; text-align: center; padding: 20px; border: 1px solid #5e4778; border-radius: 10px; max-width: 400px; margin: 20px auto; color: white;">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+  <style>
+    body {
+      background-color: #372162;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <h1 style="font-family: 'calibre', sans-serif; margin-bottom: 20px;">Fale Conosco</h1>
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-    <form action="?pg=sucesso" method="post">
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
 
-        <label for="nome" style="display: block;font-family: 'calibre', sans-serif; margin-bottom: 8px;"><b>Nome</b></label>
-        <input type="text" name="nome" id="nome"
-            style="width: 100%; max-width: 100%; padding: 12px; border: 1px solid #5e4778; border-radius: 8px; font-size: 16px; box-sizing: border-box; margin-bottom: 15px;"><br>
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-        <label for="email" style="display: block;font-family: 'calibre', sans-serif; margin-bottom: 8px;"><b>E-mail</b></label>
-        <input type="text" name="email" id="email"
-            style="width: 100%; max-width: 100%; padding: 12px; border: 1px solid #5e4778; border-radius: 8px; font-size: 16px; box-sizing: border-box; margin-bottom: 15px;"><br>
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
-        <label for="assunto" style="display: block;font-family: 'calibre', sans-serif; margin-bottom: 8px;"><b>Assunto:</b></label>
-        <select name="assunto" id="assunto"
-            style="width: 100%; max-width: 100%; padding: 12px; border: 1px solid #5e4778; border-radius: 8px; font-size: 16px; box-sizing: border-box; margin-bottom: 15px;">
-            <option value="Sugestao">Sugestão</option>
-            <option value="Reclamacao">Reclamação</option>
-            <option value="Duvidas">Dúvidas</option>
-        </select><br>
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
 
-        <label for="mensagem" style="display: block;font-family: 'calibre', sans-serif; margin-bottom: 8px;"><b>Mensagem</b></label>
-        <textarea name="mensagem" id="mensagem"
-            style="width: 100%; max-width: 100%; padding: 12px; border: 1px solid #5e4778; border-radius: 8px; font-size: 16px; box-sizing: border-box; margin-bottom: 15px; resize: vertical;"></textarea><br>
+  <div class="container">
+    <h2>Formulário de Contato</h2>
+    <form action="sucesso.php" method="post">
 
-        <input type="submit" value="Enviar"
-            style="background-color: #84fa84;font-family: 'calibre', sans-serif; color: black; border: none; padding: 12px 20px; cursor: pointer; border-radius: 8px; font-size: 18px;">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="assunto">Assunto:</label>
+      <select id="assunto" name="assunto" required>
+        <option value="problema">Problema</option>
+        <option value="sugestao">Sugestão</option>
+      </select>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
 
     </form>
-</div>
+  </div>
+
+</body>
+</html>
