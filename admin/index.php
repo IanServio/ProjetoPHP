@@ -8,48 +8,40 @@
     <style>
         body{
             background-color: #372162;
-        }
-        .login{
-            width: 100%;
-            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
             align-items: center;
             justify-content: center;
-            display: flex;
+            height: 100vh;
+        }
+        .login {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <div class="login">
-        <div class="container">
-            <div class="row">
-                <div class="col-log-4 offset-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>Acesso Restrito</h3>
-                        </div>
-                        <div class="card-body">
-                            <form action="login.php" method="POST">
-                                <div>
-                                    <div class="mb-3">
-                                        <label>Usuario</label>
-                                        <input type="text" name="usuario" class="form-control">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="mb-3">
-                                        <label>Senha</label>
-                                        <input type="password" name="senha" class="form-control">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="mb-3">
-                                        <button type="submit" class="btn btn-success">Enviar</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3>Acesso Restrito</h3>
+            </div>
+            <div class="card-body">
+                <form action="login.php" method="POST">
+                    <div class="mb-3">
+                        <label>Usuario</label>
+                        <input type="text" name="usuario" class="form-control">
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label>Senha</label>
+                        <input type="password" name="senha" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
