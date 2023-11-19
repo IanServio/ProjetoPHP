@@ -12,7 +12,7 @@ style="margin-bottom: 0; margin-right: 15px;margin-top: 10px;"></a>
 <a href="?pg=faleconosco"><img width="75" src="../png/duvidas-icone.png" 
 style="margin-bottom: 0; margin-right: 15px;margin-top: 10px;"></a>
 
-<a href="?pg=camisas"><img width="75" src="../png/camisas-icone.png" 
+<a href="?pg=../menu-add/exibir_produtos.php"><img width="75" src="../png/camisas-icone.png" 
 style="margin-bottom: 0; margin-right: 10px;margin-top: 10px;"></a>
 
 
