@@ -17,7 +17,7 @@ style="margin-bottom: 0; margin-right: 10px;margin-top: 10px;"></a>
 
 
   <!--Botãos de Login - registrar-->
-  <a href="paginalogin.php"><img width="35" src="../png/icone-login.png"
+  <a href="../admin/index.php"><img width="35" src="../png/icone-login.png"
   style="margin-bottom: 0; margin-left: 900px;margin-top: 10px;">
  
   </a>
