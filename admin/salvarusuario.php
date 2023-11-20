@@ -31,7 +31,8 @@
             $email = $_POST["email"];
             $senha = $_POST["senha"];
 
-            $sql = "UPDATE loginusuarios  SET usuario='{$usuario}', email='{$email}', senha='{$senha}' WHERE id=.$_REQUEST[id]";
+            $sql = "UPDATE loginusuarios SET usuario='{$usuario}', email='{$email}', senha='{$senha}' WHERE id={$_REQUEST['id']}";
+
 
             $res = $conn->query($sql);
 
@@ -45,12 +46,12 @@
             }
             break;
         case 'excluir':
-            $sql= "DELETE FROM loginusuarios  WHERE id=.$_REQUEST[id]"; 
+            $sql = "DELETE FROM loginusuarios WHERE id={$_REQUEST['id']}";
 
             $res = $conn->query($sql);
 
             if($res==true){
-                echo "<script>alert ('Excluido com sucesso'); </script>";
+                echo "<script>alert ('Usuario Excluido com sucesso'); </script>";
                 echo "<script>location.href='?page=listar'; </script>";
             }else{
                 echo "<script>alert ('Nao foi possivel Excluir o Usuario'); </script>";

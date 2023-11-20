@@ -1,5 +1,7 @@
 <h1> Editar usuario</h1>
+
 <?php
+    include_once('../config.php');
     $sql = "SELECT * FROM loginusuarios WHERE id=".$_REQUEST["id"];
 
     $res = $conn->query($sql);
