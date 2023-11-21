@@ -9,7 +9,7 @@
 
     <h>
         <center>
-            <p style="color: #372162;font-family: Calibri;">Especializada em camisas de futebol e artigos esportivos, a loja virtual surgiu em 2012 na cidade de Presidente Prudente (SP) e reúne uniformes completos dos mais variados clubes brasileiros, internacionais e seleções - dos mais consagrados aos menos conhecidos. Com a maior variedade em camisas de times de futebol no mercado nacional, a FutFanatics trabalha em parceria com as principais marcas esportivas para comercializar somente produtos originais e com garantia de qualidade. Além disso, a loja possui certificados de segurança que oferecem ao cliente um ambiente de compra confiável.
+            <p style="color: #372162;font-family: Calibri;">Especializada em artigos esportivos e vestuário para os amantes do esporte, a Sports Outlet nasceu em 2023 na cidade de João Pessoa (PB). A nossa loja virtual se destaca por oferecer uma ampla gama de produtos, desde camisas de futebol até equipamentos esportivos, atendendo a todas as preferências e estilos.
 
                 <a href="?pg=quemsomos" style="margin-right: 5px;
      color: blue;
