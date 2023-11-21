@@ -31,7 +31,7 @@
   <a href="paginalogin.php"><img width="35" src="./png/icone-login.png"
   style="margin-bottom: -10;
   margin-left: 900px;
- ">
+  ">
   
   </a>
 </div>

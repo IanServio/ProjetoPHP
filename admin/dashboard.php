@@ -78,6 +78,9 @@
                             case "listarp":
                                 include("listarproduto.php");
                                 break;
+                            case "editarp":
+                                include("editarproduto.php");
+                                break;
                             default:
                                 echo "<h1> Bem Vindo! </h1>
                                 <p>Aqui voce poderar, adicionar, editar, excluir e listar todas as opcoes disponiveis </p>";
