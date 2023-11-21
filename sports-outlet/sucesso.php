@@ -11,9 +11,7 @@ $fonte = "calibre, sans-serif";
 </head>
 
 <body>
-    <center>
-        <h2>
-            <p>Mensagem enviada com sucesso!!!</p>
-        </h2>
-    </center>
+<div style="display: flex; justify-content: center; margin-top: -5px;">
+  <img width="1310" src="../png/sucesso1.png">
+</div>
 </body>

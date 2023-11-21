@@ -1,15 +1,15 @@
-<div style="background-color: while;
+<div style="background-color: #372162;
 text-align: center;
 padding: 5px;
 border: 1px solid black;
 border-radius: 5px;
 max-width: 400px;
 margin: 10 auto;">
-    <h1 style="font-family: 'calibre', sans-serif;">Fale Conosco</h1>
+    <h1 style="font-family: 'calibre', sans-serif;color:white">Fale Conosco</h1>
 
     <style>
         h3 {
-            font-family: 'calibre', sans-serif;
+            font-family: 'calibre', sans-serif;color:white
         }
     </style>
     <h3>
@@ -29,7 +29,7 @@ border: 1px solid black;
 border-radius: 3px;
 font-size: 16px;"><br>
 
-            <label for="assunto"><b>Assunto:</b></label><br>
+            <label for="assunto"><b>Assunto</b></label><br>
             <select name="assunto" id="assunto" style="width: 100%;
 padding: 10px;
 margin-bottom: 10px;
