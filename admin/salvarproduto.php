@@ -19,13 +19,32 @@
 
             if($res==true){
                 echo "<script>alert ('Produto Editado com sucesso'); </script>";
-                echo "<script>location.href='?page=listar'; </script>";
+                echo "<script>location.href='?page=listarp'; </script>";
             }else{
                 echo "<script>alert ('Nao foi possivel Editar o  produto'); </script>";
                 echo "<script>location.href='?page=listarp'; </script>";
 
             }
             break;
+            case 'novop':
+                $titulo = $_POST["titulo"];
+                $imagem = $_POST["imagem"];
+                $fonte = $_POST["fonte"];
+    
+                $sql = "INSERT INTO produtos (titulo, imagem, fonte) VALUES ('{$titulo}' , '{$imagem}', '{$fonte}')";
+    
+    
+                $res = $conn->query($sql);
+    
+                if($res==true){
+                    echo "<script>alert ('Produto Adicionado com sucesso'); </script>";
+                    echo "<script>location.href='?page=listarp'; </script>";
+                }else{
+                    echo "<script>alert ('Nao foi possivel Cadastrar o Produto'); </script>";
+                    echo "<script>location.href='?page=listarp'; </script>";
+    
+                }
+                break;
         }
 
     }

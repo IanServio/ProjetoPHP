@@ -13,10 +13,12 @@
             print "<th>Titulo</th>";
             print "<th>Imagem</th>";
             print "<th>Fonte</th>";
+            print "<th>ACOES</th>";
             print "</tr>";
 
         while($row = $res->fetch_object()){
             print "<tr>";
+            print "<td>".$row->id . "</td>";
             print "<td>".$row->titulo. "</td>";
             print "<td>".$row->imagem. "</td>";
             print "<td>".$row->fonte. "</td>";
