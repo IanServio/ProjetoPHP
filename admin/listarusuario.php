@@ -38,7 +38,6 @@ if ($qtd > 0) {
         if (confirm('Tem certeza que deseja excluir?')) {
             window.location.href = '?page=salvar&acao=excluir&id=' + id;
         } else {
-            // Ação a ser executada se o usuário clicar em "Cancelar"
         }
     }
 </script>

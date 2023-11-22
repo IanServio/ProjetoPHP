@@ -34,8 +34,8 @@
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            width: 150px; /* Ajuste a largura conforme necessário */
-            height: 250px; /* Ajuste a altura conforme necessário */
+            width: 150px;
+            height: 250px;
             position: relative;
             transition: transform 0.3s ease;
         }
@@ -56,7 +56,7 @@
             color: #333;
             font-size: 14px;
             margin-bottom: 8px;
-            position: -webkit-sticky; /* Safari */
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
             background-color: #fff;
@@ -85,13 +85,10 @@
 <body>
    
     <?php
-    // Conectar ao banco de dados (substitua com suas próprias credenciais)
     $conexao = new mysqli("localhost", "root", "", "loginusuarios");
-    // Verifica a conexão
     if ($conexao->connect_error) {
         die("Falha na conexão: " . $conexao->connect_error);
     }
-    // Consulta os produtos na tabela
     $sql = "SELECT * FROM produtos";
     $result = $conexao->query($sql);
     if ($result->num_rows > 0) {
@@ -107,8 +104,6 @@
     } else {
         echo '<p>Nenhum produto cadastrado.</p>';
     }
-
-    // Fecha a conexão
     $conexao->close();
     ?>
 </body>

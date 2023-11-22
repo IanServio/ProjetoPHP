@@ -5,10 +5,8 @@ $password = "";
 $database = "loginusuarios";
 
 
-// Criar conexão
 $conn = new mysqli($servername, $username, $password, $database);
 
-// Verificar conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
@@ -52,7 +50,6 @@ if ($conn->connect_error) {
         echo "<p class='alert alert-danger text-center'>Não encontrou resultados!</p>";
     }
 
-    // Fechar conexão
     $conn->close();
     ?>
 </div>
