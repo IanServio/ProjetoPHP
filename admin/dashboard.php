@@ -8,49 +8,80 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Page Admin</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    </head>
-    <body class="body-back">
-        <nav class="navbar navbar-light bg-light">
-            <div class="container.fluid">
-                <a class="navbar-brand">Sistema De Cadastro </a>
-                <?php
-                    echo "Ola, ".$_SESSION['nome'];
-                    echo "<a href ='logout.php' class='btn btn-danger class-1'>Sair</a>";
-                ?>
-            </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Cadastro</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #372162;
+        }
+
+        .navbar {
+            background-color: #fff;
+        }
+
+        .navbar-brand {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #000;
+        }
+
+        .nav-link {
+            color: #000;
+        }
+
+        .nav-link:hover {
+            color: #372162;
+            
+        }
+        .logout-btn {
+            background-color: red;
+            color: white;
+            padding: -5px 1px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px;
+            border-radius: 5px;
+        
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="dashboard.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="dashboard.php">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=novo">Novo Usuario</a>
+                        <a class="nav-link" href="?page=novo">Novo Usuario</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=listar">Listar Usuarios</a>
+                        <a class="nav-link" href="?page=listar">Listar Usuarios</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=novop">Adicionar Produto</a>
+                        <a class="nav-link" href="?page=novop">Adicionar Produto</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=listarp">Listar Produtos</a>
+                        <a class="nav-link" href="?page=listarp">Listar Produtos</a>
                     </li>
+                    <li class="nav-item logout-btn">
+                    <a class="nav-link" href="logout.php">Sair</a>
+                </li>
                 </ul>
-                </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+
         <div class="container">
             <div class="row">
                 <div class="col mt-5">

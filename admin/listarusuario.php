@@ -1,4 +1,4 @@
-<h1>Listar usuários</h1>
+<center><h1>Listar usuários</h1></center>
 
 <?php
 $sql = "SELECT * FROM loginusuarios ";
@@ -13,7 +13,7 @@ if ($qtd > 0) {
     print "<th>ID</th>";
     print "<th>NOME</th>";
     print "<th>E-MAIL</th>";
-    print "<th>ACOES</th>";
+    print "<th>Ações</th>";
     print "</tr>";
 
     while ($row = $res->fetch_object()) {

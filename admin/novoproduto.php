@@ -1,3 +1,4 @@
+<h1>Adicionar Produto</h1>
 <form action="../sports-outlet/processar_produto.php" method="POST">
    <input type="hidden" name="acao" value="novop">
    <div class="mb-3">
@@ -15,4 +16,9 @@
    <div class="mb-3">
       <button type="submit" class="btn btn-primary">Enviar</button>
    </div>
+   <style>
+      .mb-3{color:white
+
+      }
+      </style>
 </form>
