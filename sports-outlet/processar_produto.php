@@ -17,9 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    // Insere os dados no banco de dados
    $sql = "INSERT INTO produtos (titulo, imagem, fonte) VALUES ('$titulo', '$imagem', '$fonte')";
    if ($conexao->query($sql) === TRUE) {
-      echo "Produto adicionado com sucesso!";
+      echo "<script>alert ('Produto adicionado com sucesso.'); </script>";
+      echo "<script>location.href='../admin/dashboard.php?page=novop'; </script>";
    } else {
-      echo "Erro ao adicionar o produto: " . $conexao->error;
+      echo "<script>alert ('Erro ao adicionar o produto'); </script>". $conexao->error;;
+      echo "<script>location.href='../admin/dashboard.php?page=novop'; </script>";
    }
 
    // Fecha a conexão
