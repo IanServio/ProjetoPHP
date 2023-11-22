@@ -3,7 +3,7 @@
     if(empty($_SESSION)){
         print "<script> location.href = 'index.php';</script>";
     }
-
+    
 ?>
 
 <!DOCTYPE html>
