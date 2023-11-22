@@ -1,3 +1,18 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "produtos";
+
+// Criar conexão
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Verificar conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+?>
+
 <div class="container mt-5">
     <h1 class="text-center">Listar Produtos</h1>
     <?php
@@ -36,5 +51,10 @@
     } else {
         echo "<p class='alert alert-danger text-center'>Não encontrou resultados!</p>";
     }
+
+    // Fechar conexão
+    $conn->close();
     ?>
 </div>
+
+

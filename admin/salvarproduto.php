@@ -1,52 +1,65 @@
 <?php
-    if(empty($_POST) or (empty($_POST["titulo"]) or (empty($_POST["imagem"]) or (empty($_POST["fonte"]))))){
-        echo "<script>alert ('Nao foi possivel salvar o produto'); </script>";
-        echo "<script> location.href = 'dashboard.php';</script>";
-        exit;
-    }else{
-
-
+    include_once('../sports-outlet/config.php');
+    
 
     switch ($_REQUEST['acao']) {
-        case 'editarp':
-            $titulo = $_POST["titulo"];
-            $imagem = $_POST["imagem"];
-            $fonte = $_POST["fonte"];
+        case 'cadastrar':
+        if(empty($_POST) or (empty($_POST["usuario"]) or (empty($_POST["senha"]) or (empty($_POST["email"]))))){
+            echo "<script>alert ('Nao foi possivel fazer o cadastro'); </script>";
+            echo "<script> location.href = 'dashboard.php';</script>";
+            exit;
+        }
+            $usuario = $_POST["usuario"];
+            $email = $_POST["email"];
+            $senha = $_POST["senha"];
 
-            $sql = "UPDATE produtos SET titulo='{$titulo}', imagem='{$imagem}', fonte='{$fonte}' WHERE id={$_REQUEST['id']}";
+            $sql = "INSERT INTO loginusuarios (usuario, email, senha) VALUES ('{$usuario}' , '{$email}', '{$senha}')";
 
             $res = $conn->query($sql);
 
             if($res==true){
-                echo "<script>alert ('Produto Editado com sucesso'); </script>";
-                echo "<script>location.href='?page=listarp'; </script>";
+                echo "<script>alert ('Usuario Cadastrado com sucesso'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
             }else{
-                echo "<script>alert ('Nao foi possivel Editar o  produto'); </script>";
-                echo "<script>location.href='?page=listarp'; </script>";
+                echo "<script>alert ('Nao foi possivel fazer o cadastro'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
 
             }
             break;
-            case 'novop':
-                $titulo = $_POST["titulo"];
-                $imagem = $_POST["imagem"];
-                $fonte = $_POST["fonte"];
-    
-                $sql = "INSERT INTO produtos (titulo, imagem, fonte) VALUES ('{$titulo}' , '{$imagem}', '{$fonte}')";
-    
-    
-                $res = $conn->query($sql);
-    
-                if($res==true){
-                    echo "<script>alert ('Produto Adicionado com sucesso'); </script>";
-                    echo "<script>location.href='?page=listarp'; </script>";
-                }else{
-                    echo "<script>alert ('Nao foi possivel Cadastrar o Produto'); </script>";
-                    echo "<script>location.href='?page=listarp'; </script>";
-    
-                }
-                break;
-        }
+        case 'editar':
+            $usuario = $_POST["usuario"];
+            $email = $_POST["email"];
+            $senha = $_POST["senha"];
 
-    }
+            $sql = "UPDATE loginusuarios SET usuario='{$usuario}', email='{$email}', senha='{$senha}' WHERE id={$_REQUEST['id']}";
+
+
+            $res = $conn->query($sql);
+
+            if($res==true){
+                echo "<script>alert ('Usuario Editado com sucesso'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+            }else{
+                echo "<script>alert ('Nao foi possivel Editar o Usuario'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+
+            }
+            break;
+        case 'excluir':
+            $sql = "DELETE FROM loginusuarios WHERE id={$_REQUEST['id']}";
+
+            $res = $conn->query($sql);
+
+            if($res==true){
+                echo "<script>alert ('Usuario Excluido com sucesso'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+            }else{
+                echo "<script>alert ('Nao foi possivel Excluir o Usuario'); </script>";
+                echo "<script>location.href='?page=listar'; </script>";
+
+            }
+            break;
+        
+     }
 
 ?>
