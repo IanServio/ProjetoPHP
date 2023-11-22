@@ -1,7 +1,7 @@
 <h1> Editar Produto</h1>
 
 <?php
-    include_once('../config.php');
+    include_once('../sports-outlet/config.php');
     $sql = "SELECT * FROM produtos WHERE id=".$_REQUEST["id"];
 
     $res = $conn->query($sql);

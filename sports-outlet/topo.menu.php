@@ -12,7 +12,7 @@ style="margin-bottom: 0; margin-right: 15px;margin-top: 10px;"></a>
 <a href="?pg=faleconosco"><img width="75" src="../png/duvidas-icone.png" 
 style="margin-bottom: 0; margin-right: 15px;margin-top: 10px;"></a>
 
-<a href="?pg=../menu-add/exibir_produtos.php"><img width="91" src="../png/produtos.png" 
+<a href="?pg=produtos"><img width="91" src="../png/produtos.png" 
 style="margin-bottom: 0; margin-right: 10px;margin-top: 10px;"></a>
 
 
