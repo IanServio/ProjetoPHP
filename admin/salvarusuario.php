@@ -1,14 +1,13 @@
 <?php
     include_once('../config.php');
-    if(empty($_POST) or (empty($_POST["usuario"]) or (empty($_POST["senha"]) or (empty($_POST["email"]))))){
-        echo "<script>alert ('Nao foi possivel fazer o cadastro'); </script>";
-        echo "<script> location.href = 'dashboard.php';</script>";
-        exit;
-    }
-
 
     switch ($_REQUEST['acao']) {
         case 'cadastrar':
+            if(empty($_POST) or (empty($_POST["usuario"]) or (empty($_POST["senha"]) or (empty($_POST["email"]))))){
+                echo "<script>alert ('Nao foi possivel fazer o cadastro'); </script>";
+                echo "<script> location.href = 'dashboard.php';</script>";
+                exit;
+            }
             $usuario = $_POST["usuario"];
             $email = $_POST["email"];
             $senha = $_POST["senha"];

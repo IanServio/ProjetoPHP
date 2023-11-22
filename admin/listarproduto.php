@@ -24,8 +24,9 @@
             print "<td>".$row->fonte. "</td>";
             print "<td>
                     <button onclick=\"location.href='?page=editarp&id=".$row->id."';\" class='btn btn-success'> Editar </button>
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'> Excluir </button>
-                   </td>";
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvarp&acao=excluirp&id=".$row->id."'; return true;}else{return false;}\" class='btn btn-danger'> Excluir </button>
+                </td>";
+
             print "</tr>";
 
         }
