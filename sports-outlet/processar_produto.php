@@ -2,7 +2,7 @@
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    // Conectar ao banco de dados (substitua com suas próprias credenciais)
-   $conexao = new mysqli("localhost", "root", "", "produtos");
+   $conexao = new mysqli("localhost", "root", "", "loginusuarios");
 
    // Verifica a conexão
    if ($conexao->connect_error) {

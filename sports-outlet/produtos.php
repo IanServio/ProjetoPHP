@@ -86,7 +86,7 @@
    
     <?php
     // Conectar ao banco de dados (substitua com suas próprias credenciais)
-    $conexao = new mysqli("localhost", "root", "", "produtos");
+    $conexao = new mysqli("localhost", "root", "", "loginusuarios");
     // Verifica a conexão
     if ($conexao->connect_error) {
         die("Falha na conexão: " . $conexao->connect_error);
