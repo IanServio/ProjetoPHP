@@ -55,15 +55,3 @@
     </div>
 </body>
 </html>
-<?php
-include_once("dashboard.php");
-
-if (empty($_SERVER["QUERY_STRING"])) {
-    $var = "dashboard.php";
-    include_once("$var");
-} else {
-    $pg = $_GET["pg"];
-    include_once("$pg.php");
-}
-include_once("dashboard.php");
-?>

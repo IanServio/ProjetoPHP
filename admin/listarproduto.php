@@ -1,6 +1,6 @@
-<h1> Listar usuarios</h1>
+<h1> Listar Produtos</h1>
 <?php
-    $sql = "SELECT * FROM loginusuarios ";
+    $sql = "SELECT * FROM produtos ";
 
     $res = $conn->query($sql);
 
@@ -10,18 +10,20 @@
         print "<table class='table table-hover table-bordered'>";
             print "<tr>";
             print "<th>ID</th>";
-            print "<th>NOME</th>";
-            print "<th>E-MAIL</th>";
+            print "<th>Titulo</th>";
+            print "<th>Imagem</th>";
+            print "<th>Fonte</th>";
             print "<th>ACOES</th>";
             print "</tr>";
 
         while($row = $res->fetch_object()){
             print "<tr>";
-            print "<td>".$row->id. "</td>";
-            print "<td>".$row->usuario. "</td>";
-            print "<td>".$row->email. "</td>";
+            print "<td>".$row->id . "</td>";
+            print "<td>".$row->titulo. "</td>";
+            print "<td>".$row->imagem. "</td>";
+            print "<td>".$row->fonte. "</td>";
             print "<td>
-                    <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'> Editar </button>
+                    <button onclick=\"location.href='?page=editarp&id=".$row->id."';\" class='btn btn-success'> Editar </button>
                     <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'> Excluir </button>
                    </td>";
             print "</tr>";
