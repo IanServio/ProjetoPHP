@@ -5,7 +5,7 @@
     $sql = "SELECT * FROM produtos WHERE id=".$_REQUEST["id"];
 
     $res = $conn->query($sql);
-   # $row = $res->fetch_object();
+    $row = $res->fetch_object();
 ?>
 <form action="?page=salvarp" method="POST">
     <input type="hidden" name="acao" value="editarp">
