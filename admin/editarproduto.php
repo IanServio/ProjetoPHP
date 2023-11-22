@@ -1,15 +1,33 @@
-<?php
-$userId = $_REQUEST['id'];
-$sql = "SELECT * FROM loginusuarios WHERE id = $userId";
-$result = $conn->query($sql);
-$userData = $result->fetch_assoc();
-?>
+<h1> Editar Produto</h1>
 
-<!-- Formulário de Edição -->
-<form action="?acao=editar&id=<?php echo $userId; ?>" method="post">
-    <!-- Campos do formulário preenchidos com os dados existentes do usuário -->
-    <input type="text" name="usuario" value="<?php echo $userData['usuario']; ?>">
-    <input type="text" name="email" value="<?php echo $userData['email']; ?>">
-    <input type="password" name="senha" value="<?php echo $userData['senha']; ?>">
-    <input type="submit" value="Salvar Edição">
+<?php
+    include_once('../sports-outlet/config.php');
+    $sql = "SELECT * FROM produtos WHERE id=".$_REQUEST["id"];
+
+    $res = $conn->query($sql);
+   # $row = $res->fetch_object();
+?>
+<form action="?page=salvarp" method="POST">
+    <input type="hidden" name="acao" value="editarp">
+    <input type="hidden" name="id" value="<?php print $row->id; ?>">
+    <div class="mb-3">
+        <label> Titulo </label>
+        <input type="text" name="titulo" value=" <?php print $row->titulo;  ?>" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label> Imagem </label>
+        <input type="text" name="imagem"  value=" <?php print $row->imagem;  ?>" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label> Fonte </label>
+        <input type="text" name="fonte" value=" <?php print $row->fonte;  ?>" class="form-control">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary"> Enviar</button>
+    </div>
+    <style>
+        .mb-3{
+            color: white;
+        }
+    </style>
 </form>

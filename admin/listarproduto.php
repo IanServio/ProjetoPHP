@@ -40,10 +40,9 @@ if ($conn->connect_error) {
             echo "<td><img src='" . $row->imagem . "' alt='Imagem' style='max-width: 100px; max-height: 100px;'></td>";
             echo "<td>" . $row->fonte . "</td>";
             echo "<td>
-                    <button onclick=\"location.href='?page=editarp&id=" . $row->id . "';\" class='btn btn-success'> Editar </button>
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=" . $row->id . "';}else{false;}\" class='btn btn-danger'> Excluir </button>
-                   </td>";
-            echo "</tr>";
+            <button onclick=\"location.href='?page=editarp&id=".$row->id."';\" class='btn btn-success'> Editar </button>
+            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvarp&acao=excluirp&id=".$row->id."'; return true;}else{return false;}\" class='btn btn-danger'> Excluir </button>
+        </td>";
         }
 
         echo "</tbody>";
